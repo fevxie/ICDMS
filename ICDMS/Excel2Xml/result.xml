@@ -1,1 +1,37 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Commands>
+    <Command id="1">
+      <address>1</address>
+      <inputs>
+        <input name="高度" code="height_warning" type="short int"/>
+      </inputs>
+      <condition statement="=" Value="88"/>
+    </Command>
+    <Command id="2">
+      <address>2</address>
+      <inputs>
+        <input name="速度" code="testA1" type="bool"/>
+      </inputs>
+      <condition statement="=" Value="0"/>
+    </Command>
+    <Command id="3">
+      <address>3</address>
+      <inputs>
+        <input name="马赫数" code="testA2" type="float"/>
+      </inputs>
+      <condition statement="=" Value="1"/>
+    </Command>
+    <Command id="4">
+      <address>4</address>
+      <inputs>
+        <input name="SD" code="testA3" type="short int"/>
+      </inputs>
+      <condition statement=">" Value="1"/>
+    </Command>
+    <Collpase>
+      <CommandID>1,2,3,4</CommandID>
+      <Action>AND</Action>
+      <Address>1</Address>
+      <OutPut Name="高度警告" Code="H_ERR" Type="Bool" Value="1"/>
+    </Collpase>
+</Commands>
