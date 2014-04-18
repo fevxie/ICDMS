@@ -51,6 +51,7 @@ namespace Excel2Xml
                 }
                 else
                 {
+
                     sb.Append(commandList[i].Cells[0].Data + ";");
                 }
 
